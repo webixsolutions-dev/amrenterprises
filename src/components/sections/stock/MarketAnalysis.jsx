@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from "react";  
+import ChartTrading from "../../ui/ChartTrading";
 const MarketAnalysis = () => {
     return (
         <section className="bg-black text-white px-6 md:px-12 py-16 md:py-20">

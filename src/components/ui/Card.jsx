@@ -100,7 +100,7 @@ Card.Text = function CardText({ children, className = '' }) {
     <p
       className={`text-gray-400 text-sm sm:text-base leading-6 sm:leading-7 ${className}`}
     >
-      {children}
+      {typeof children === 'string' ? children.trim() : children}
     </p>
   )
 }

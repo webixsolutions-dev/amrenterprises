@@ -80,12 +80,14 @@ const PotentialPartnership = () => {
     <section className="bg-black px-5 py-10 sm:px-8 md:px-[6%] md:py-16">
 
       {/* Hero */}
-      <div className="grid grid-cols-1  mt-12 items-center gap-8 md:grid-cols-2 md:gap-12">
-
+      <div className="grid grid-cols-1 mt-12 items-center gap-8 md:grid-cols-2 md:gap-12">
         {/* Image */}
         <div className="w-full">
-          {/* Image yahan baad mein laga dena */}
-          <img className="h-[280px] w-full bg-[#111] sm:h-[350px] md:h-[420px]" src={heroImg} />
+          <img
+            className="h-[280px] w-full bg-[#111] sm:h-[350px] md:h-[420px] object-cover"
+            src={heroImg}
+            alt="Partnership Opportunities"
+          />
         </div>
 
         {/* Content */}
@@ -103,10 +105,14 @@ const PotentialPartnership = () => {
             organizations, professionals, and institutions who share our
             commitment to excellence, integrity, and client satisfaction.
           </p>
+
+          <Link to="/contact-us">
+            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold  hover:bg-brand/80 transition-all duration-300">
+              Find Out More
+            </button>
+          </Link>
         </div>
-
       </div>
-
       {/* Why Partner */}
       {/* Why Partner */}
       <div className="mt-16 md:mt-24">

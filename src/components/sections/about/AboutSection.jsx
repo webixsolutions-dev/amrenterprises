@@ -7,20 +7,39 @@ const AboutSection = () => {
         {/* Left Side - Content */}
         <div className="order-1">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About Amayra Enterprises
+            ABOUT AMAYRA ENTERPRISES
           </h2>
           
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-            At Amayra Enterprises, we are dedicated to empowering businesses with innovative solutions 
-            and strategic guidance. With years of experience across multiple industries, we provide 
-            expert business and management consulting services to help your company succeed in today's 
-            competitive landscape.
+          <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6">
+            Welcome to Amayra Enterprises Capitals and Investment, where financial expertise meets personalized service.
           </p>
           
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-            Our team of seasoned professionals works closely with clients to understand their unique 
-            challenges and opportunities, delivering tailored strategies that drive growth, efficiency, 
-            and long-term success.
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            At Amayra, we believe that every investor deserves a partner who is committed to their financial success. Established with a vision to empower individuals and businesses to achieve their financial goals, we specialize in providing comprehensive capital management and investment solutions tailored to your unique needs.
+          </p>
+          
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            Our journey began with a simple yet profound mission: to deliver exceptional financial services with integrity, transparency, and a relentless dedication to client satisfaction. With a team of seasoned professionals boasting decades of collective experience in the financial industry, we combine expertise with innovation to offer a diverse range of investment strategies and wealth management solutions.
+          </p>
+          
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            What sets us apart is our unwavering commitment to understanding your aspirations, risk tolerance, and financial objectives. Whether you're planning for retirement, building your investment portfolio, or seeking strategic guidance for your business ventures, we take the time to listen, analyze, and devise personalized strategies designed to optimize your financial potential.
+          </p>
+          
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            Transparency is the cornerstone of our approach. We believe in fostering open, honest, and collaborative relationships with our clients, built on trust and mutual respect. Our transparent fee structure, clear communication, and unbiased advice ensure that you have the information and insight needed to make informed decisions about your financial future.
+          </p>
+          
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            At Amayra, we recognize that the financial landscape is constantly evolving. That's why we remain committed to staying ahead of the curve, continuously adapting our strategies to capitalize on emerging opportunities and mitigate potential risks. Whether it's navigating market fluctuations, identifying lucrative investment avenues, or optimizing your tax efficiency, our team is dedicated to providing proactive guidance and support every step of the way.
+          </p>
+          
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+            Beyond our commitment to excellence in financial management, we are deeply invested in giving back to the communities we serve. Through philanthropic initiatives and community outreach programs, we strive to make a positive impact and create a brighter future for generations to come.
+          </p>
+          
+          <p className="text-white/80 text-base md:text-lg leading-relaxed">
+            Thank you for considering Amayra Enterprises Capitals and Investment as your trusted financial partner. We look forward to embarking on this journey together, guiding you towards financial prosperity and peace of mind.
           </p>
         </div>
 

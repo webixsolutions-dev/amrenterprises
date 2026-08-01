@@ -1,6 +1,7 @@
 import React from 'react';
 import img from '../../assets/images/market-insight.webp'
 import Card from '../../components/ui/Card'
+import { Link } from 'react-router-dom';
 
 const insights = [
   {
@@ -52,7 +53,6 @@ const MarketInsight = () => {
 
       {/* Hero */}
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 mt-12">
-
         {/* Left Image */}
         <div className="w-full">
           <img
@@ -80,8 +80,13 @@ const MarketInsight = () => {
             landscape, trends, and dynamics that directly impact our clients'
             businesses.
           </p>
-        </div>
 
+          <Link to="/contact-us">
+            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold  hover:bg-brand/80 transition-all duration-300">
+              Find Out More
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* About */}

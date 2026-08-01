@@ -7,10 +7,10 @@ const WhyChoose = () => {
             <div className=" mx-auto">
                 {/* Heading */}
                 <div className="text-start mb-16">
-                    <h2 className="text-2xl md:text-3xl font-bold">
+                    <h2 className="text-2xl md:text-3xl font-bold mx-8">
                         MAXIMIZE YOUR BUSINESS POTENTIAL
                     </h2>
-                    <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8"></div>
+                    <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8 mx-8"></div>
                 </div>
 
                 {/* Sections - Flex Layout */}

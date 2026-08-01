@@ -21,13 +21,13 @@ const categories = [
 
 const TransFormSec = () => {
   return (
-    <section className="bg-black text-gray-400 py-20 px-4">
+    <section className="bg-black text-gray-400  px-4">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h3 className="text-4xl md:text-5xl font-bold text-white text-start py-10 mb-4">
+        <h3 className="text-4xl md:text-5xl font-bold text-white text-start mx-8 pt-10 mb-4">
           Transform Your Business Strategy Today
         </h3>
-        <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8"></div>
+        <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8 mx-8"></div>
 
 
 
