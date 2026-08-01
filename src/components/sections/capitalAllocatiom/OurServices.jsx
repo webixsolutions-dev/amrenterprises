@@ -1,8 +1,8 @@
 import React from 'react';
-import img1 from '../../../assets/images/capital-services.webp';
-import img2 from '../../../assets/images/capitalservices-managment.webp';
-import img3 from '../../../assets/images/capital-Financial-analysis.webp';
-import img4 from '../../../assets/images/risk-managment-capital-allocations.webp';
+import img1 from '../../../assets/images/capitalservices.webp';
+import img2 from '../../../assets/images/capitalservicesmanagment.webp';
+import img3 from '../../../assets/images/capitalFinancialanalysis.webp';
+import img4 from '../../../assets/images/riskmanagmentcapitalallocations.webp';
 import Card from '../../ui/Card';
 const services = [
     {
