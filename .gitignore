@@ -1,0 +1,261 @@
+# ============================================
+# DEPENDENCIES
+# ============================================
+node_modules/
+npm-debug.log*
+package-lock.json
+.npm
+
+# ============================================
+# BUILD OUTPUT (Vite)
+# ============================================
+/dist
+/build
+/.vite
+/vite.config.js.timestamp-*
+/vite.config.ts.timestamp-*
+
+# ============================================
+# ENVIRONMENT VARIABLES
+# ============================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+*.env.*
+!.env.example
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+.vscode-test/
+.history/
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+.sublime/
+
+# Vim
+*.swp
+*.swo
+*~
+*.un~
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+*.tmp
+*.temp
+
+# ============================================
+# LOGS
+# ============================================
+logs/
+*.log
+npm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ============================================
+# COVERAGE & TESTING
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+*.coverage
+
+# Vitest / Jest
+__tests__/__snapshots__/
+*.snap
+.vitest/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/fixtures/example.json
+
+# ============================================
+# CACHE FILES
+# ============================================
+.eslintcache
+.stylelintcache
+.tsbuildinfo
+*.tsbuildinfo
+.cache/
+.parcel-cache/
+.swc/
+.temp/
+.tmp/
+
+# ============================================
+# TYPE SCRIPT
+# ============================================
+*.tsbuildinfo
+*.ts.map
+*.js.map
+*.d.ts.map
+
+# ============================================
+# COMPRESSED FILES
+# ============================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.tgz
+*.gz
+*.bz2
+
+# ============================================
+# DATABASE FILES
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============================================
+# SSL CERTIFICATES
+# ============================================
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+*.csr
+*.der
+*.cer
+*.p7b
+*.p7c
+
+# ============================================
+# SECURITY & SENSITIVE FILES
+# ============================================
+secrets/
+credentials/
+*.credentials
+*.keychain
+*.token
+*.tokens
+*.jwt
+*.jwk
+.ssh/
+id_rsa*
+id_ecdsa*
+id_ed25519*
+known_hosts
+
+# ============================================
+# DEPLOYMENT SPECIFIC
+# ============================================
+# Vercel
+.vercel/
+vercel.json
+vercel/
+
+# Netlify
+.netlify/
+netlify.toml
+netlify/
+
+# Cloudflare
+.cloudflare/
+wrangler.toml
+wrangler/
+
+# ============================================
+# STORYBOOK
+# ============================================
+storybook-static/
+.storybook/
+
+# ============================================
+# PWA / SERVICE WORKER
+# ============================================
+sw.js
+sw-workbox.js
+workbox-*.js
+*.precache.*
+*.precache-manifest.*
+manifest.json
+manifest.webmanifest
+
+# ============================================
+# TAILWIND CSS
+# ============================================
+*.css.map
+*.scss.map
+*.sass.map
+*.less.map
+
+# ============================================
+# MISC
+# ============================================
+# Docker
+.dockerignore
+Dockerfile
+docker-compose*.yml
+docker-compose*.yaml
+
+# Git
+*.orig
+*.rej
+*.patch
+*.diff
+*.merge
+*.mergeconflict
+*.tmp.*
+.gitattributes
+.gitkeep
+*.mailmap
+
+# ============================================
+# CUSTOM - ADD YOUR PROJECT SPECIFIC FILES HERE
+# ============================================
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+*.swp
+*.swo
+*.user
+*.user.*
+*.private
+*.local
+*.data
+*.dat
+*.raw
