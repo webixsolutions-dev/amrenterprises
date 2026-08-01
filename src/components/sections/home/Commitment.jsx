@@ -1,8 +1,8 @@
 import React from 'react'
-import img1 from '../../../assets/images/Expertise.webp'
-import img2 from '../../../assets/images/Transparency.webp'
-import img3 from '../../../assets/images/Customization.webp'
-import img4 from '../../../assets/images/Partnership.webp'
+import img1 from '../../../assets/images/expertise.webp'
+import img2 from '../../../assets/images/transparency.webp'
+import img3 from '../../../assets/images/customization.webp'
+import img4 from '../../../assets/images/partnership.webp'
 import Card from '../../ui/Card'
 
 const commitments = [
