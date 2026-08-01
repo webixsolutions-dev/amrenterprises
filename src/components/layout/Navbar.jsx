@@ -76,8 +76,8 @@ export default function Navbar() {
               src={logo}
               alt="Amayra Enterprises"
               className={` transition-all duration-300 ${scrolled
-                  ? 'h-20 md:h-28 lg:h-28 w-auto'
-                  : 'h-28 md:h-32 lg:h-36 w-auto'
+                ? 'h-16 md:h-16 lg:h-16 w-auto'  
+                : 'h-20 md:h-28 lg:h-28 w-auto' 
                 }`}
             />
           </Link>
