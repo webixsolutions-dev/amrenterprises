@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "vercel-build": "npm run build",
     "build:analyze": "vite build --mode analyze"
   },
   "engines": {
