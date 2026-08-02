@@ -51,7 +51,7 @@ const KeyStrategy = () => {
         <section className="bg-black text-white py-20 px-4">
             <div className="max-w-7xl ">
                 {/* Heading */}
-                <h3 className="text-3xl md:text-4xl font-bold text-white text-start mx-8  mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-white text-start mx-8  mb-4">
                     Key investment strategies with Amayra Enterprises
                 </h3>
                 <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8 mx-8"></div>
@@ -62,7 +62,7 @@ const KeyStrategy = () => {
                             key={strategy.id}
                             className="overflow-hidden group flex flex-col"
                         >
-                            <Card.Title as="h4" className="text-xl mb-3">
+                            <Card.Title as="h4" className="text-xl normal-case text-white mb-3">
                                 {strategy.title}
                             </Card.Title>
 

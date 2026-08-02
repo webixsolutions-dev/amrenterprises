@@ -6,7 +6,7 @@ const OurProducts = () => {
         <section className="py-20 bg-black px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-x-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="text-start">
-                    <span className="text-white font-semibold tracking-widest text-xs sm:text-sm">
+                    <span className="text-3xl font-bold text-start mb-4 text-white ">
                         Our Products
                     </span>
                     <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-6"></div>

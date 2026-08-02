@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CommonForm from "../components/ui/Form";
+import { Helmet } from "react-helmet-async";
 
 const Careers = () => {
   // ===================== JOB 1: OPERATIONS SUPERVISOR =====================
@@ -341,484 +342,494 @@ const Careers = () => {
 
   // ===================== RENDER =====================
   return (
-    <section className="bg-black text-white min-h-screen pt-28 md:pt-32 pb-16">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        {/* Header */}
-        <div className="mb-10 md:mb-14">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-semibold text-brand">
-            We're Hiring
-          </h1>
-          <div className="w-full h-px bg-white/30 mt-4" />
-        </div>
 
-        {/* ===================== JOB 1 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job1.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job1.salary}</span></li>
-              <li>{job1.type}</li>
-              <li>{job1.shifts}</li>
-              <li>{job1.startDate}</li>
-              <li>{job1.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job1.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job1.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job1.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+    <>
+
+      <Helmet>
+        <title>Careers | Amayra Enterprises</title>
+        <meta name="description" content="Join our team at Amayra Enterprises - Explore career opportunities and apply now" />
+        <meta name="keywords" content="careers, jobs, hiring, employment, Amayra Enterprises" />
+      </Helmet>
+
+      <section className="bg-black text-white min-h-screen pt-28 md:pt-32 pb-16">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          {/* Header */}
+          <div className="mb-10 md:mb-14">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-semibold text-brand">
+              We're Hiring
+            </h1>
+            <div className="w-full h-px bg-white/30 mt-4" />
+          </div>
+
+          {/* ===================== JOB 1 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job1.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job1.salary}</span></li>
+                <li>{job1.type}</li>
+                <li>{job1.shifts}</li>
+                <li>{job1.startDate}</li>
+                <li>{job1.benefits}</li>
               </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job1.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job1.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job1.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job1.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job1.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
             </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job1.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job1.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job1.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job1.title)} />
             </div>
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job1.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job1.title)} />
+
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
           </div>
-        </div>
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
-
-        {/* ===================== JOB 2 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job2.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job2.salary}</span></li>
-              <li>{job2.type}</li>
-              <li>{job2.shifts}</li>
-              <li>{job2.startDate}</li>
-              <li>{job2.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job2.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job2.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job2.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+          {/* ===================== JOB 2 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job2.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job2.salary}</span></li>
+                <li>{job2.type}</li>
+                <li>{job2.shifts}</li>
+                <li>{job2.startDate}</li>
+                <li>{job2.benefits}</li>
               </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job2.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job2.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job2.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job2.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job2.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
             </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job2.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job2.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
-            </div>
-          </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job2.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job2.title)} />
-          </div>
-        </div>
-
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
-
-        {/* Continue for remaining jobs with same structure... */}
-
-        {/* ===================== JOB 3 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job3.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job3.salary}</span></li>
-              <li>{job3.type}</li>
-              <li>{job3.shifts}</li>
-              <li>{job3.startDate}</li>
-              <li>{job3.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job3.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job3.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job3.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job3.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job3.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job2.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job2.title)} />
             </div>
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job3.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job3.title)} />
-          </div>
-        </div>
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
+          </div>
 
-        {/* ===================== JOB 4 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job4.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job4.salary}</span></li>
-              <li>{job4.type}</li>
-              <li>{job4.shifts}</li>
-              <li>{job4.startDate}</li>
-              <li>{job4.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job4.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job4.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job4.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job4.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job4.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tech Knowledge</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job4.tech.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
-            </div>
-          </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job4.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job4.title)} />
-          </div>
-        </div>
+          {/* Continue for remaining jobs with same structure... */}
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
+          {/* ===================== JOB 3 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job3.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job3.salary}</span></li>
+                <li>{job3.type}</li>
+                <li>{job3.shifts}</li>
+                <li>{job3.startDate}</li>
+                <li>{job3.benefits}</li>
+              </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job3.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job3.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job3.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job3.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job3.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job3.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job3.title)} />
+            </div>
+          </div>
 
-        {/* ===================== JOB 5 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job5.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job5.salary}</span></li>
-              <li>{job5.type}</li>
-              <li>{job5.shifts}</li>
-              <li>{job5.startDate}</li>
-              <li>{job5.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job5.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job5.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job5.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job5.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job5.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
-            </div>
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job5.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job5.title)} />
-          </div>
-        </div>
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
+          {/* ===================== JOB 4 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job4.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job4.salary}</span></li>
+                <li>{job4.type}</li>
+                <li>{job4.shifts}</li>
+                <li>{job4.startDate}</li>
+                <li>{job4.benefits}</li>
+              </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job4.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job4.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job4.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job4.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job4.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tech Knowledge</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job4.tech.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job4.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job4.title)} />
+            </div>
+          </div>
 
-        {/* ===================== JOB 6 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job6.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job6.salary}</span></li>
-              <li>{job6.type}</li>
-              <li>{job6.shifts}</li>
-              <li>{job6.startDate}</li>
-              <li>{job6.benefits}</li>
-              {job6.vacancies > 1 && (<li>{job6.vacancies} vacancies available</li>)}
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job6.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job6.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job6.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job6.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job6.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tech Knowledge</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job6.tech.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
-            </div>
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job6.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job6.title)} />
-          </div>
-        </div>
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
+          {/* ===================== JOB 5 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job5.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job5.salary}</span></li>
+                <li>{job5.type}</li>
+                <li>{job5.shifts}</li>
+                <li>{job5.startDate}</li>
+                <li>{job5.benefits}</li>
+              </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job5.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job5.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job5.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job5.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job5.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job5.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job5.title)} />
+            </div>
+          </div>
 
-        {/* ===================== JOB 7 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
-          <div>
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job7.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job7.salary}</span></li>
-              <li>{job7.type}</li>
-              <li>{job7.shifts}</li>
-              <li>{job7.startDate}</li>
-              <li>{job7.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job7.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job7.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job7.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job7.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job7.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
-            </div>
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job7.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job7.title)} />
-          </div>
-        </div>
 
-        <div className="mb-12 md:mb-16">
-          <div className="w-full h-px bg-white/30" />
-        </div>
+          {/* ===================== JOB 6 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job6.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job6.salary}</span></li>
+                <li>{job6.type}</li>
+                <li>{job6.shifts}</li>
+                <li>{job6.startDate}</li>
+                <li>{job6.benefits}</li>
+                {job6.vacancies > 1 && (<li>{job6.vacancies} vacancies available</li>)}
+              </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job6.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job6.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job6.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job6.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job6.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tech Knowledge</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job6.tech.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job6.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job6.title)} />
+            </div>
+          </div>
 
-        {/* ===================== JOB 8 ===================== */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16">
-          <div className="p-4 border border-white/10 rounded">
-            <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job8.title}</h2>
-            <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
-              <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
-              <li>Salary: <span className="text-white">{job8.salary}</span></li>
-              <li>{job8.type}</li>
-              <li>{job8.shifts}</li>
-              <li>{job8.startDate}</li>
-              <li>{job8.benefits}</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job8.education}</p></div>
-              <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job8.experience}</p></div>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
-              <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
-                {job8.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
+          </div>
+
+          {/* ===================== JOB 7 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
+            <div>
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job7.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job7.salary}</span></li>
+                <li>{job7.type}</li>
+                <li>{job7.shifts}</li>
+                <li>{job7.startDate}</li>
+                <li>{job7.benefits}</li>
               </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job7.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job7.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job7.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job7.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job7.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
             </div>
-            <div className="mt-6">
-              <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job8.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-5">
-              <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
-              <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
-                {job8.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
-              </ul>
-            </div>
-            <div className="mt-6 p-4 border border-white/10 rounded">
-              <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-              <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job7.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job7.title)} />
             </div>
           </div>
-          <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
-              Apply Now
-              <span className="text-sm font-normal text-white/50 block mt-1.5">{job8.title}</span>
-            </h2>
-            <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job8.title)} />
+
+          <div className="mb-12 md:mb-16">
+            <div className="w-full h-px bg-white/30" />
+          </div>
+
+          {/* ===================== JOB 8 ===================== */}
+          <div className="grid lg:grid-cols-2 gap-8 xl:gap-16">
+            <div className="p-4 border border-white/10 rounded">
+              <p className="text-white/50 text-xs mb-3">Date posted: 19/06/2024</p>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 uppercase">{job8.title}</h2>
+              <ul className="space-y-1.5 text-white/65 text-xs sm:text-sm list-disc pl-5">
+                <li>Location: Barrhead, Alberta T7N 1L1, Canada</li>
+                <li>Salary: <span className="text-white">{job8.salary}</span></li>
+                <li>{job8.type}</li>
+                <li>{job8.shifts}</li>
+                <li>{job8.startDate}</li>
+                <li>{job8.benefits}</li>
+              </ul>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Overview</h3>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Languages</h4><p className="text-white/65 text-xs sm:text-sm pl-5">English</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Education</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job8.education}</p></div>
+                <div className="mb-3"><h4 className="text-white/70 font-medium text-xs sm:text-sm mb-0.5">Experience</h4><p className="text-white/65 text-xs sm:text-sm pl-5">{job8.experience}</p></div>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Responsibilities</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Tasks</h4>
+                <ul className="list-disc pl-8 space-y-1 text-white/65 text-xs sm:text-sm">
+                  {job8.tasks.map((task, idx) => (<li key={idx}>{task}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">Additional Information</h3>
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Work conditions and physical capabilities</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job8.conditions.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-5">
+                <h4 className="text-white/70 font-medium text-xs sm:text-sm mb-1.5">Personal suitability</h4>
+                <ul className="list-disc pl-8 space-y-0.5 text-white/65 text-xs sm:text-sm">
+                  {job8.suitability.map((item, idx) => (<li key={idx}>{item}</li>))}
+                </ul>
+              </div>
+              <div className="mt-6 p-4 border border-white/10 rounded">
+                <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-8">
+                Apply Now
+                <span className="text-sm font-normal text-white/50 block mt-1.5">{job8.title}</span>
+              </h2>
+              <CommonForm fields={careerFields} submitText="Submit Application" onSubmit={(data) => handleCareerSubmit(data, job8.title)} />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

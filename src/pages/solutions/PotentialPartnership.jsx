@@ -1,10 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import heroImg from '../../assets/images/partnership-hero.webp'
 
 import img1 from '../../assets/images/international-1.webp';
 import img2 from '../../assets/images/international-2.webp';
 import img3 from '../../assets/images/international-3.webp';
 import { Link } from 'react-router-dom';
+
 const whyPartner = [
   {
     title: 'Expertise',
@@ -32,21 +34,18 @@ const partnershipInfo = [
   {
     title: 'Partnership Landscape',
     image: img1,
-
     description:
       'Analysis of potential partnership opportunities in target markets. Overview of industry trends and dynamics influencing partnership strategies. Discussion on the significance of strategic alliances for business growth.',
   },
   {
     title: 'Partnership Objectives',
     image: img2,
-
     description:
       'Identification of key partnership objectives and goals. Explanation of how partnerships support business expansion initiatives. Emphasis on mutual benefits and value proposition for potential partners.',
   },
   {
     title: 'Partner Criteria',
     image: img3,
-
     description:
       'Evaluation criteria for potential partners, including compatibility and capabilities. Importance of due diligence and relationship-building in partner selection. Overview of how Amayra Enterprises can assist in identifying and evaluating potential partners.',
   },
@@ -77,161 +76,127 @@ const opportunities = [
 
 const PotentialPartnership = () => {
   return (
-    <section className="bg-black px-5 py-10 sm:px-8 md:px-[6%] md:py-16">
+    <>
+      <Helmet>
+        <title>Potential Partnership | Amayra Enterprises</title>
+        <meta name="description" content="Explore partnership opportunities with Amayra Enterprises - Join us to drive mutual growth and success" />
+        <meta name="keywords" content="partnership, strategic alliances, investment partnerships, business collaboration, growth opportunities" />
+      </Helmet>
 
-      {/* Hero */}
-      <div className="grid grid-cols-1 mt-12 items-center gap-8 md:grid-cols-2 md:gap-12">
-        {/* Image */}
-        <div className="w-full">
-          <img
-            className="h-[280px] w-full bg-[#111] sm:h-[350px] md:h-[420px] object-cover"
-            src={heroImg}
-            alt="Partnership Opportunities"
-          />
-        </div>
+      <section className="bg-black px-5 py-10 sm:px-8 md:px-[6%] md:py-16">
 
-        {/* Content */}
-        <div>
-          <h1 className="text-xl font-semibold uppercase leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl">
-            Explore Partnership Opportunities with Amayra Enterprise
-          </h1>
-
-          <div className="mt-6 h-px w-full bg-gray-500" />
-
-          <p className="mt-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
-            At Amayra Enterprises Capitals and Investment, we believe in
-            the power of collaboration to drive mutual growth and success.
-            We welcome opportunities to partner with like-minded
-            organizations, professionals, and institutions who share our
-            commitment to excellence, integrity, and client satisfaction.
-          </p>
-          <Link to="/contact-us">
-            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand">
-              Find Out More
-            </button>
-          </Link>
-        </div>
-      </div>
-      {/* Why Partner */}
-      {/* Why Partner */}
-      <div className="mt-16 md:mt-24">
-
-        <div className="grid grid-cols-1 md:grid-cols-2">
-
-          {/* Left Content */}
-          <div className="px-0 md:pr-12 lg:pr-20">
-
-            <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
-              Why Partner with Us?
-            </h2>
-
-            <div className="mt-5 h-px w-full bg-gray-500" />
-
-            <div className="mt-10 space-y-12">
-
-              {whyPartner.map((item, index) => (
-                <div key={item.title}>
-
-                  <h3 className="text-xl font-medium normal-case text-white sm:text-2xl">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
-                    {item.description}
-                  </p>
-
-                </div>
-              ))}
-
-            </div>
-
-          </div>
-
-          {/* Right Image */}
-          <div className="mt-10 w-full md:mt-0">
-            <img
-              src={heroImg}
-              alt="Why Partner With Us"
-              className="h-[400px] w-full object-cover sm:h-[500px] md:h-[650px] lg:h-[700px]"
-            />
-          </div>
-
-        </div>
-
-      </div>
-      {/* About Partnership */}
-      {/* About Amayra Enterprises Partnership */}
-      <div className="mt-16 md:mt-24">
-
-        <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
-          About Amayra Enterprises Partnership
-        </h2>
-
-        <div className="mt-5 h-px w-full bg-gray-500" />
-
-        {/* 3 Items */}
-        <div className="mt-10 grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-12">
-
-          {partnershipInfo.map((item) => (
-            <div key={item.title}>
-
-              {/* Circle Image */}
-              <div className="mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-full sm:max-w-[280px] md:max-w-none">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              {/* Title */}
-              <h3 className="mt-7 text-xl normal-case text-center font-medium text-white sm:text-2xl">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="mt-5 text-sm text-center leading-7 text-gray-400 sm:text-base">
-                {item.description}
-              </p>
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-      {/* Partnership Opportunities */}
-      <div className="mt-16 md:mt-24">
-
-        <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
-          Partnership Opportunities
-        </h2>
-
-        <div className="mt-5 h-px w-full bg-gray-500" />
-
-        <div className="mt-10 grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
-
-          {/* Left Image */}
+        {/* Hero */}
+        <div className="grid grid-cols-1 mt-12 items-center gap-8 md:grid-cols-2 md:gap-12">
+          {/* Image */}
           <div className="w-full">
             <img
+              className="h-[280px] w-full bg-[#111] sm:h-[350px] md:h-[420px] object-cover"
               src={heroImg}
               alt="Partnership Opportunities"
-              className="h-[350px] w-full object-cover sm:h-[450px] md:h-[600px] lg:h-[650px]"
             />
           </div>
 
-          {/* Right Content */}
-          <div className="space-y-10 md:space-y-12">
+          {/* Content */}
+          <div>
+            <h1 className="text-xl font-semibold uppercase leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl">
+              Explore Partnership Opportunities with Amayra Enterprise
+            </h1>
 
-            {opportunities.map((item, index) => (
+            <div className="mt-6 h-px w-full bg-gray-500" />
+
+            <p className="mt-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+              At Amayra Enterprises Capitals and Investment, we believe in
+              the power of collaboration to drive mutual growth and success.
+              We welcome opportunities to partner with like-minded
+              organizations, professionals, and institutions who share our
+              commitment to excellence, integrity, and client satisfaction.
+            </p>
+            <Link to="/contact-us">
+              <button className="mt-6 px-6 py-3 normal-case bg-brand text-black font-semibold border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand">
+                Find Out More
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Why Partner */}
+        <div className="mt-16 md:mt-24">
+
+          <div className="grid grid-cols-1 md:grid-cols-2">
+
+            {/* Left Content */}
+            <div className="px-0 md:pr-12 lg:pr-20">
+
+              <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
+                Why Partner with Us?
+              </h2>
+
+              <div className="mt-5 h-px w-full bg-gray-500" />
+
+              <div className="mt-10 space-y-12">
+
+                {whyPartner.map((item, index) => (
+                  <div key={item.title}>
+
+                    <h3 className="text-xl font-medium normal-case text-white sm:text-2xl">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+                      {item.description}
+                    </p>
+
+                  </div>
+                ))}
+
+              </div>
+
+            </div>
+
+            {/* Right Image */}
+            <div className="mt-10 w-full md:mt-0">
+              <img
+                src={heroImg}
+                alt="Why Partner With Us"
+                className="h-[400px] w-full object-cover sm:h-[500px] md:h-[650px] lg:h-[700px]"
+              />
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* About Amayra Enterprises Partnership */}
+        <div className="mt-16 md:mt-24">
+
+          <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
+            About Amayra Enterprises Partnership
+          </h2>
+
+          <div className="mt-5 h-px w-full bg-gray-500" />
+
+          {/* 3 Items */}
+          <div className="mt-10 grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-12">
+
+            {partnershipInfo.map((item) => (
               <div key={item.title}>
 
+                {/* Circle Image */}
+                <div className="mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-full sm:max-w-[280px] md:max-w-none">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-                <h3 className="mt-2 text-xl normal-case font-medium text-white sm:text-xl md:text-2xl">
+                {/* Title */}
+                <h3 className="mt-7 text-xl normal-case text-center font-medium text-white sm:text-2xl">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+                {/* Description */}
+                <p className="mt-5 text-sm text-center leading-7 text-gray-400 sm:text-base">
                   {item.description}
                 </p>
 
@@ -242,34 +207,75 @@ const PotentialPartnership = () => {
 
         </div>
 
-      </div>
+        {/* Partnership Opportunities */}
+        <div className="mt-16 md:mt-24">
 
-      {/* Let's Partner Together */}
-      <div className="mt-16 md:mt-24 mx-auto text-center">
+          <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+            Partnership Opportunities
+          </h2>
 
-        <h2 className="text-xl font-semibold normal-case text-white sm:text-xl md:text-2xl">
-          Let's Partner Together
-        </h2>
+          <div className="mt-5 h-px w-full bg-gray-500" />
 
+          <div className="mt-10 grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
 
-        <p className="mt-6 mx-24 max-w-6xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
-          Whether you're a financial advisor, institution, technology
-          provider, or industry partner, we invite you to explore
-          partnership opportunities with Amayra Enterprises Capitals and
-          Investment. Together, we can create synergies, drive innovation,
-          and unlock new opportunities for growth and success.
-        </p>
+            {/* Left Image */}
+            <div className="w-full">
+              <img
+                src={heroImg}
+                alt="Partnership Opportunities"
+                className="h-[350px] w-full object-cover sm:h-[450px] md:h-[600px] lg:h-[650px]"
+              />
+            </div>
 
-        <Link
-          to="/contact-us"
-          className="inline-block border mt-8 border-brand bg-brand px-7 py-3 text-sm font-medium uppercase tracking-wide text-black transition-all duration-300 hover:bg-black hover:text-brand"
-        >
-          Contact Us
-        </Link>
+            {/* Right Content */}
+            <div className="space-y-10 md:space-y-12">
 
-      </div>
+              {opportunities.map((item, index) => (
+                <div key={item.title}>
 
-    </section>
+                  <h3 className="mt-2 text-xl normal-case font-medium text-white sm:text-xl md:text-2xl">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+                    {item.description}
+                  </p>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Let's Partner Together */}
+        <div className="mt-16 md:mt-24 mx-auto text-center">
+
+          <h2 className="text-xl font-semibold normal-case text-white sm:text-xl md:text-2xl">
+            Let's Partner Together
+          </h2>
+
+          <p className="mt-6 mx-24 max-w-6xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+            Whether you're a financial advisor, institution, technology
+            provider, or industry partner, we invite you to explore
+            partnership opportunities with Amayra Enterprises Capitals and
+            Investment. Together, we can create synergies, drive innovation,
+            and unlock new opportunities for growth and success.
+          </p>
+
+          <Link
+            to="/contact-us"
+            className="inline-block border normal-case mt-8 border-brand bg-brand px-7 py-3 text-sm font-medium uppercase tracking-wide text-black transition-all duration-300 hover:bg-black hover:text-brand"
+          >
+            Contact Us
+          </Link>
+
+        </div>
+
+      </section>
+    </>
   );
 };
 

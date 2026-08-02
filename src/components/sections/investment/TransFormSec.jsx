@@ -24,7 +24,7 @@ const TransFormSec = () => {
     <section className="bg-black text-gray-400  px-4">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h3 className="text-4xl md:text-5xl font-bold text-white text-start mx-8 pt-10 mb-4">
+        <h3 className="text-2xl md:text-3xl font-bold text-white text-start mx-8 pt-10 mb-4">
           Transform Your Business Strategy Today
         </h3>
         <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8 mx-8"></div>
@@ -40,7 +40,7 @@ const TransFormSec = () => {
             >
               {/* Title on top */}
               <div className="py-4 text-start ">
-                <h4 className="text-xl font-semibold text-white">
+                <h4 className="text-xl normal-case text-white">
                   {category.title}
                 </h4>
               </div>

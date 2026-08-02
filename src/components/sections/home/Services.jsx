@@ -31,7 +31,7 @@ export default function Services() {
             variant="outline"
             className="p-6 text-brand sm:p-8 flex flex-col justify-center items-start w-full"
           >
-            <Card.Title as="h3" className="text-lg text-brand sm:text-xl mb-3">
+            <Card.Title as="h3" className="text-lg  normal-case text-brand sm:text-xl mb-3">
               {item.title}
             </Card.Title>
             <Card.Text className="leading-relaxed w-full">

@@ -6,19 +6,26 @@ export default function CookieConsent() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] max-w-4xl bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-2xl shadow-black/50 text-gray-200 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 z-50">
-      <p className="text-sm md:text-base text-center md:text-left text-gray-300 leading-relaxed">
-        This website uses cookies. We use cookies to analyze website traffic and optimize your
-        website experience. By accepting our use of cookies, your data will be aggregated with
-        all other user data.
+    <div className="fixed bottom-4 right-4 w-[90%] sm:w-[380px] md:w-[420px] lg:w-[450px] bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-2xl shadow-black/50 text-gray-200 p-5 md:p-6 z-[999]">
+      
+      <h3 className="text-white font-semibold text-base md:text-lg mb-3">
+        This website uses cookies.
+      </h3>
+
+      <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
+        If you are curious to study or examine traffic and advertising you should 
+        explore the examples and use of cookies on your data and for aggregated 
+        and all other user data.
       </p>
 
-      <button
-        onClick={() => setVisible(false)}
-        className="bg-brand text-black font-semibold px-6 py-2.5 rounded-md hover:bg-white transition-all duration-300 shrink-0 text-sm md:text-base"
-      >
-        Accept
-      </button>
+      <div className="flex justify-center mt-5">
+        <button
+          onClick={() => setVisible(false)}
+          className="bg-brand text-black font-semibold px-8 py-2.5 rounded-md hover:bg-white transition-all duration-300 text-sm"
+        >
+          Accept
+        </button>
+      </div>
     </div>
   )
 }

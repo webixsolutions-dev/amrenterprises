@@ -23,8 +23,14 @@ export default function Navbar() {
   }, [location.pathname])
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => document.body.style.overflow = ''
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [mobileOpen])
 
   const isActive = (path) => {
@@ -43,10 +49,11 @@ export default function Navbar() {
     <>
       <div className="h-[80px] md:h-24 lg:h-24"></div>
 
-      <header className={`fixed top-0 left-0 right-0 z-50 text-white shadow-sm transition-all duration-300 
+      {/* 👇 FIXED - Hamesha black background */}
+      <header className={`fixed top-0 left-0 right-0 z-50 text-black transition-all duration-300 
         ${scrolled 
-          ? 'bg-black/80 backdrop-blur-md shadow-gray-900' 
-          : 'bg-black lg:bg-transparent' // 👈 Mobile pe hamesha black
+          ? 'bg-black shadow-gray-900' 
+          : 'bg-black'
         }`}
       >
         <div className={`container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? 'h-16 md:h-20' : 'h-[80px] md:h-24'}`}>
@@ -152,9 +159,9 @@ export default function Navbar() {
           <div className="lg:hidden w-9"></div>
         </div>
 
-        {/* Mobile Menu - Already Black */}
-        <div className={`lg:hidden fixed inset-0 bg-black transition-transform duration-300 ease-in-out z-40 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <nav className="flex flex-col items-center justify-start h-full px-6 py-8 gap-1 overflow-y-auto">
+        {/* Mobile Menu */}
+        <div className={`lg:hidden fixed inset-0 bg-black z-40 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+          <nav className="flex flex-col items-center justify-start h-full w-full px-6 py-20 gap-1 overflow-y-auto">
             <Link 
               to="/" 
               className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${

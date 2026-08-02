@@ -38,7 +38,7 @@ export default function Commitment() {
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {commitments.map((item) => (
             <Card key={item.title} className="shadow-sm">
-              <Card.Title as="h3" className="text-base sm:text-lg mb-3 text-white">
+              <Card.Title as="h3" className="text-base sm:text-lg mb-3 normal-case text-white">
                 {item.title}
               </Card.Title>
               
