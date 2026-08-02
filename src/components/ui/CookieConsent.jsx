@@ -6,22 +6,22 @@ export default function CookieConsent() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-4 right-4 w-[90%] sm:w-[380px] md:w-[420px] lg:w-[450px] bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-2xl shadow-black/50 text-gray-200 p-5 md:p-6 z-[999]">
-      
-      <h3 className="text-white font-semibold text-base md:text-lg mb-3">
-        This website uses cookies.
+    <div className="fixed bottom-4 right-4 w-[90%] sm:w-[380px] md:w-[420px] lg:w-[450px] bg-brand shadow-2xl shadow-black/50 text-white p-5 md:p-6 z-[999]">
+
+      <h3 className="text-white normal-case text-base md:text-lg mb-3">
+        This website uses cookies
       </h3>
 
-      <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
-        If you are curious to study or examine traffic and advertising you should 
-        explore the examples and use of cookies on your data and for aggregated 
-        and all other user data.
+      <p className="text-xs md:text-sm text-white/90 leading-relaxed">
+        We use cookies to analyze website traffic and personalize your browsing experience.
+        By accepting these cookies, you help us improve our website and for registered users
+        all other user data.
       </p>
 
-      <div className="flex justify-center mt-5">
+      <div className="flex mt-5">
         <button
           onClick={() => setVisible(false)}
-          className="bg-brand text-black font-semibold px-8 py-2.5 rounded-md hover:bg-white transition-all duration-300 text-sm"
+          className="w-full bg-black text-white normal-case px-8 py-2.5 rounded-md text-sm"
         >
           Accept
         </button>
