@@ -3,11 +3,11 @@ import HeroImg from '../../../assets/images/capital_Hero.webp';
 function Hero() {
     return (
         <section className="bg-black px-5 py-10 sm:px-8 sm:py-12 md:px-[6%] md:py-16 lg:py-20">
-            <h1 className="text-2xl font-semibold uppercase leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="text-xl font-semibold uppercase leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl">
                 Capital Allocation
             </h1>
 
-            <div className="mt-5 mb-7 h-px w-full bg-gray-500 sm:mt-6 sm:mb-9 md:mt-8 md:mb-10" />
+            <div className="mt-3 mb-7 h-px w-full bg-gray-500 sm:mt-5 sm:mb-9 md:mt-6 md:mb-10" />
 
             <div className="w-full overflow-hidden">
                 <img

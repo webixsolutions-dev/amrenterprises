@@ -173,19 +173,27 @@ const CommonForm = ({
                 type="submit"
                 disabled={loading}
                 className="
-                    w-full
-                    h-[50px]
-                    md:h-[50px]
-                    bg-brand
-                    text-black
-                    text-lg
-                    md:text-xl
-                    font-semibold
-                    hover:bg-brand-dark
-                    transition
-                    disabled:opacity-50
-                    disabled:cursor-not-allowed
-                "
+        w-full
+        h-[50px]
+        md:h-[50px]
+        bg-brand
+        text-black
+        text-lg
+        md:text-xl
+        font-semibold
+        normal-case
+        border border-brand
+        transition-all
+        duration-300
+        hover:bg-transparent
+        hover:text-brand
+        hover:border-brand
+        disabled:opacity-50
+        disabled:cursor-not-allowed
+        disabled:hover:bg-brand
+        disabled:hover:text-black
+        disabled:hover:border-brand
+    "
             >
                 {loading ? "Sending..." : submitText}
             </button>

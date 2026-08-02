@@ -27,6 +27,10 @@ export default function Navbar() {
     return () => document.body.style.overflow = ''
   }, [mobileOpen])
 
+  const isActive = (path) => {
+    return location.pathname === path
+  }
+
   const leftNavLinks = navLinks.filter(link =>
     ['Home', 'Investment Strategies', 'About'].includes(link.label)
   )
@@ -37,13 +41,16 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Spacer */}
       <div className="h-[80px] md:h-24 lg:h-24"></div>
 
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-black text-white shadow-sm transition-all duration-300 ${scrolled ? 'shadow-md shadow-gray-900' : ''}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 text-white shadow-sm transition-all duration-300 
+        ${scrolled 
+          ? 'bg-black/80 backdrop-blur-md shadow-gray-900' 
+          : 'bg-black lg:bg-transparent' // 👈 Mobile pe hamesha black
+        }`}
+      >
         <div className={`container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? 'h-16 md:h-20' : 'h-[80px] md:h-24'}`}>
 
-          {/* Mobile Hamburger */}
           <button
             className="lg:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5 z-[100]"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -54,40 +61,45 @@ export default function Navbar() {
             <span className={`block h-0.5 w-6 bg-white rounded transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
 
-          {/* Desktop Left Menu */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-10">
             {leftNavLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm xl:text-base font-medium transition-colors ${location.pathname === link.path ? 'text-brand' : 'text-white hover:text-brand'}`}
+                className={`relative text-sm xl:text-base font-medium transition-colors ${
+                  isActive(link.path) 
+                    ? 'text-brand' 
+                    : 'text-white hover:text-brand'
+                }`}
               >
                 {link.label}
+                {isActive(link.path) && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand"></span>
+                )}
               </Link>
             ))}
           </nav>
 
-
           <Link
             to="/"
-            className="absolute mt-8  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+            className="absolute mt-8 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
           >
             <img
               src={logo}
               alt="Amayra Enterprises"
-              className={` transition-all duration-300 ${scrolled
-                ? 'h-16 md:h-16 lg:h-16 w-auto'  
-                : 'h-20 md:h-28 lg:h-28 w-auto' 
-                }`}
+              className={`transition-all duration-300 ${
+                scrolled
+                  ? 'h-16 md:h-16 lg:h-16 w-auto'  
+                  : 'h-20 md:h-28 lg:h-28 w-auto' 
+              }`}
             />
           </Link>
 
-          {/* Desktop Right Menu */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-10 ml-auto">
             {rightNavLinks.map((link) =>
               link.children ? (
                 <div key={link.label} className="relative" onMouseEnter={() => setDropdownOpen(link.label)} onMouseLeave={() => setDropdownOpen(false)}>
-                  <button className="flex items-center gap-1 text-white hover:text-brand font-medium text-sm xl:text-base transition-colors">
+                  <button className="flex items-center gap-1 text-white hover:text-brand font-medium text-sm xl:text-base transition-colors normal-case">
                     {link.label}
                     <svg className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen === link.label ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -104,15 +116,25 @@ export default function Navbar() {
                   </div>
                 </div>
               ) : (
-                <Link key={link.path} to={link.path} className={`text-sm xl:text-base font-medium transition-colors ${location.pathname === link.path ? 'text-brand' : 'text-white hover:text-brand'}`}>
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`relative text-sm xl:text-base font-medium transition-colors ${
+                    isActive(link.path) 
+                      ? 'text-brand' 
+                      : 'text-white hover:text-brand'
+                  }`}
+                >
                   {link.label}
+                  {isActive(link.path) && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand"></span>
+                  )}
                 </Link>
               )
             )}
 
-            {/* More Dropdown */}
             <div className="relative" onMouseEnter={() => setMoreOpen(true)} onMouseLeave={() => setMoreOpen(false)}>
-              <button className="flex items-center gap-1 text-white hover:text-brand font-medium text-sm xl:text-base transition-colors">
+              <button className="flex items-center normal-case gap-1 text-white hover:text-brand font-medium text-sm xl:text-base transition-colors">
                 More
                 <svg className={`w-4 h-4 transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -127,21 +149,51 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Empty div for mobile balance */}
           <div className="lg:hidden w-9"></div>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`lg:hidden fixed inset-0 bg-black/95 backdrop-blur-sm transition-transform duration-300 ease-in-out z-40 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        {/* Mobile Menu - Already Black */}
+        <div className={`lg:hidden fixed inset-0 bg-black transition-transform duration-300 ease-in-out z-40 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <nav className="flex flex-col items-center justify-start h-full px-6 py-8 gap-1 overflow-y-auto">
-            <Link to="/" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Home</Link>
-            <Link to="/investment-strategies" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Investment Strategies</Link>
-            <Link to="/about" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link to="/booked-today" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Our Products</Link>
+            <Link 
+              to="/" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/investment-strategies" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/investment-strategies') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Investment Strategies
+            </Link>
+            <Link 
+              to="/about" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/about') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/booked-today" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/booked-today') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Our Products
+            </Link>
 
-            {/* Solutions Dropdown */}
             <div className="w-full max-w-sm border-b border-gray-800">
-              <button className="w-full flex items-center justify-center py-3 font-medium text-white hover:text-brand text-lg transition-colors gap-2" onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}>
+              <button className="w-full flex items-center justify-center py-3 font-medium text-white hover:text-brand text-lg transition-colors gap-2 normal-case" onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}>
                 Solutions
                 <svg className={`w-5 h-5 transition-transform duration-200 ${mobileSolutionsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -155,9 +207,33 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link to="/stock-market" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Stock Market</Link>
-            <Link to="/contact-us" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Contact Us</Link>
-            <Link to="/careers" className="w-full max-w-sm py-3 font-medium text-white hover:text-brand border-b border-gray-800 text-center text-lg transition-colors" onClick={() => setMobileOpen(false)}>Careers</Link>
+            <Link 
+              to="/stock-market" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/stock-market') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Stock Market
+            </Link>
+            <Link 
+              to="/contact-us" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/contact-us') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact Us
+            </Link>
+            <Link 
+              to="/careers" 
+              className={`w-full max-w-sm py-3 font-medium text-center text-lg transition-colors border-b border-gray-800 ${
+                isActive('/careers') ? 'text-brand' : 'text-white hover:text-brand'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              Careers
+            </Link>
           </nav>
         </div>
       </header>

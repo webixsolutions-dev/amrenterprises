@@ -2,11 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  overflow-x: hidden !important;
+/* ===== OVERFLOW CONTROL - X hidden, Y auto ===== */
+html {
+  overflow: hidden auto !important; /* X = hidden, Y = auto */
 }
 
+/* Ya agar sirf X axis chahiye to */
+html {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* ===== GLOBAL FONT SETTINGS ===== */
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
   background-color: black !important;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important; /* Extra safety */
+}
+
+/* ===== HEADINGS - Cabin Bold ===== */
+h1, h2, h3, h4, h5, h6,
+.nav-link,
+.navbar-brand,
+.heading,
+.section-title,
+.page-title {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== BUTTONS ===== */
+button,
+.btn,
+.button {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== PARAGRAPHS & BODY TEXT ===== */
+p,
+li,
+span,
+.description,
+.text-content {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 400;
+}
+
+/* ===== BOOKTODAY SPECIFIC ===== */
+.our-products-section h2,
+.booktoday-page h1,
+.booktoday-page h2 {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.our-products-section p,
+.booktoday-page p,
+.booktoday-page li {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+}
+
+/* ===== NAVIGATION ===== */
+nav,
+.navbar,
+.nav-menu {
+  font-family: 'Cabin', 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  p { font-size: 16px; }
 }

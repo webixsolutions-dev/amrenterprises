@@ -76,15 +76,14 @@ const InternationalOptions = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="space-y-12">
             <div>
-              <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+              <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
                 Why Consider International Investing?
               </h2>
 
-              <div className="mt-5 h-px w-full bg-gray-500" />
 
               <div className="mt-8 space-y-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
                 <p>
-                  <span className="font-semibold text-white">Diversification:</span>{' '}
+                  Diversification:{' '}
                   Investing internationally allows you to spread your risk across
                   different markets, sectors, and currencies, reducing the impact
                   of regional economic downturns or geopolitical events on your
@@ -92,7 +91,7 @@ const InternationalOptions = () => {
                 </p>
 
                 <p>
-                  <span className="font-semibold text-white">Growth Potential:</span>{' '}
+                  Growth Potential:{' '}
                   Emerging markets offer tremendous growth potential, driven by
                   factors such as demographic trends, urbanization, and technological
                   advancements. By tapping into these markets, you can access
@@ -100,16 +99,16 @@ const InternationalOptions = () => {
                 </p>
 
                 <p>
-                  <span className="font-semibold text-white">Currency Exposure:</span>{' '}
+                  Currency Exposure:{' '}
                   Investing in international markets provides exposure to foreign
                   currencies, which can serve as a hedge against currency
                   fluctuations and enhance your portfolio's risk-adjusted returns.
                 </p>
 
                 <p>
-                  <span className="font-semibold text-white">
+                  
                     Innovation and Differentiated Opportunities:
-                  </span>{' '}
+                  {' '}
                   International markets offer access to innovative companies,
                   disruptive technologies, and unique investment themes that may not
                   be prevalent in your home market.
@@ -123,15 +122,14 @@ const InternationalOptions = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+              <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
                 Our Approach
               </h2>
 
-              <div className="mt-5 h-px w-full bg-gray-500" />
 
               <div className="mt-8 space-y-6 text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
                 <p>
-                  <span className="font-semibold text-white">Comprehensive Research:</span>{' '}
+                  Comprehensive Research:{' '}
                   Our team conducts rigorous research and analysis to identify
                   attractive international investment opportunities across asset
                   classes, sectors, and regions.
@@ -145,7 +143,7 @@ const InternationalOptions = () => {
                 </p>
 
                 <p>
-                  <span className="font-semibold text-white">Risk Management:</span>{' '}
+                 Risk Management:{' '}
                   Investing internationally comes with its own set of risks,
                   including currency risk, political risk, and regulatory risk. We
                   employ sophisticated risk management techniques to mitigate these
@@ -154,7 +152,7 @@ const InternationalOptions = () => {
                 </p>
 
                 <p>
-                  <span className="font-semibold text-white">Active Management:</span>{' '}
+                  Active Management:{' '}
                   We believe in the power of active management to add value and
                   outperform passive benchmarks in international markets.
                 </p>

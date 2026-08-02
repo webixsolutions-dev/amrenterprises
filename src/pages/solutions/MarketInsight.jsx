@@ -49,7 +49,7 @@ const otherInsights = [
 
 const MarketInsight = () => {
   return (
-    <section className="bg-black px-5 py-10 sm:px-8 md:px-[6%] md:py-16">
+    <section className="bg-black px-5 sm:px-8 md:px-[6%] md:py-10">
 
       {/* Hero */}
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 mt-12">
@@ -64,15 +64,14 @@ const MarketInsight = () => {
 
         {/* Right Content */}
         <div>
-          <span className="text-sm font-medium uppercase tracking-widest text-gray-500">
+          <span className="text-sm font-medium  tracking-widest text-gray-500">
             Hello
           </span>
 
-          <h1 className="mt-3 text-3xl font-semibold uppercase leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mt-3 text-xl font-semibold uppercase leading-tight text-white sm:text-2xl md:text-2xl lg:text-4xl">
             Market Insights at AE
           </h1>
 
-          <div className="mt-6 h-px w-full bg-gray-500" />
 
           <p className="mt-6 max-w-4xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
             Market insights are crucial at Amayra Enterprises because they
@@ -82,7 +81,7 @@ const MarketInsight = () => {
           </p>
 
           <Link to="/contact-us">
-            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold  hover:bg-brand/80 transition-all duration-300">
+            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand">
               Find Out More
             </button>
           </Link>
@@ -99,7 +98,7 @@ const MarketInsight = () => {
         <div className="mt-5 h-px w-full bg-gray-500" />
 
         {/* 3 Cards */}
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-0">
+        <div className="mt-32 grid grid-cols-1  gap-8 md:grid-cols-3 md:gap-0">
 
           {insights.map((item, index) => (
             <Card
@@ -110,11 +109,11 @@ const MarketInsight = () => {
                 : ''
                 }`}
             >
-              <Card.Title as="h3" className="text-brand text-xl sm:text-2xl mb-0 leading-snug">
+              <Card.Title as="h1" className="text-brand text-2xl sm:text-xl md:text-3xl mb-0 leading-snug">
                 {item.title}
               </Card.Title>
 
-              <Card.Text className="mt-6 leading-7">
+              <Card.Text className="mt-6 md:text-2xl leading-7">
                 {item.description}
               </Card.Text>
             </Card>
@@ -139,7 +138,7 @@ const MarketInsight = () => {
             <img
               src={img}
               alt="Market Insights"
-              className="sticky top-8 h-[280px] w-full object-cover sm:h-[350px] md:h-[400px] lg:h-[450px]"
+              className="sticky top-8 h-[200px] w-full object-cover sm:h-[250px] md:h-[300px] lg:h-[350px]"
             />
           </div>
 
@@ -148,9 +147,9 @@ const MarketInsight = () => {
 
             {otherInsights.map((item, index) => (
               <Card key={item.title} variant="outline">
-                <Card.Number>0{index + 1}</Card.Number>
+             
 
-                <Card.Title as="h3" className="mt-2 text-xl sm:text-2xl md:text-3xl font-medium mb-0 leading-snug">
+                <Card.Title as="p" className="mt-2 text-white text-xl sm:text-2xl md:text-3xl font-medium mb-0 leading-snug">
                   {item.title}
                 </Card.Title>
 

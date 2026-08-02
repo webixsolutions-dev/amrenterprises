@@ -1,79 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bookTodayLogo from "../../../assets/images/products-logo.png";
 
 const FeaturedProducts = () => {
     return (
-        <section className="bg-black py-24">
-            <div className="container mx-auto px-6 lg:px-12">
-                {/* Section Heading */}
-                <div className="mb-16">
-                    <p className="text-blue-500 uppercase tracking-[0.25em] text-sm font-semibold">
-                        Featured Product
-                    </p>
+        <section className="bg-black pt-20 mx-12">
+            <div className="container mx-auto px-4 md:px-12">
+                <div className="text-start">
+                    <div className="flex items-center gap-3 text-gray-400 text-sm mb-6">
+                        <Link to="/products" className="hover:text-white transition">Our Products</Link>
+                        <span>/</span>
+                        <span className="text-white">BookToday</span>
+                    </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+                    <p className="text-4xl md:text-5xl lg:text-6xl  text-brand mb-6">
                         BookToday
-                    </h2>
-
-                    <div className="w-full  h-[1px] bg-gray-600 mt-5 mb-6"></div>
-
-                    <p className="text-gray-400 text-lg leading-8 max-w-3xl mt-8">
-                        BookToday is an official product and trade name owned and operated
-                        by AMR Enterprises. It is an online booking platform where customers
-                        can search, compare and book accommodations and travel-related
-                        services. BookToday is developed, managed and maintained by AMR
-                        Enterprises.
                     </p>
-                </div>
 
-                {/* Product Card */}
-                <div className="border border-gray-800 rounded-2xl bg-[#0d0d0d] hover:border-blue-500 transition-all duration-300">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center p-8 lg:p-12">
+                    <p className="text-gray-400 max-w-4xl mt-6 leading-8 text-base md:text-lg">
+                        BookToday is an official product and trade name owned and operated by AMR Enterprises.
+                    </p>
 
-                        {/* Left */}
-                        <div>
-                            <img
-                                src={bookTodayLogo}
-                                alt="BookToday Logo"
-                                className="h-auto object-contain mb-8"
-                            />
+                    <p className="text-gray-400 max-w-4xl mt-4 leading-8 text-base md:text-lg">
+                        BookToday is an online accommodation and travel-booking platform where customers can search,
+                        compare, and book accommodations and travel-related services through a convenient digital platform.
+                        BookToday is developed, managed, and maintained by AMR Enterprises.
+                    </p>
 
-                            <h3 className="text-3xl font-bold text-white">
-                                BookToday
-                            </h3>
+                    <div className="w-full  h-[1px] bg-gray-700 mt-8 mb-8"></div>
 
-                            <p className="text-gray-400 leading-8 mt-6">
-                                BookToday enables customers to search, compare and book
-                                accommodations while supporting travel-related services through
-                                a convenient online booking platform.
+                    <div className="grid md:grid-cols-2 gap-8 ">
+                        <div >
+                            <h3 className="text-brand text-xl font-bold mb-3">Mission</h3>
+                            <p className="text-gray-400 leading-7">
+                                To provide customers with a convenient and accessible way to search, compare, and book accommodation and travel-related services.
                             </p>
-
-                            <Link
-                                to="/booktoday"
-                                className="inline-flex items-center mt-10 px-7 py-4 bg-blue-600 hover:bg-blue-700  text-black transition"
-                            >
-                                Explore BookToday
-                            </Link>
                         </div>
-
-                        {/* Right */}
-                        <div className="bg-[#111111] border border-gray-800 rounded-xl p-8">
-                            <h4 className="text-white text-2xl font-semibold mb-6">
-                                Highlights
-                            </h4>
-
-                            <ul className="space-y-5 text-gray-400">
-                                <li> Online Booking Platform</li>
-                                <li> Accommodation Search</li>
-                                <li> Accommodation Comparison</li>
-                                <li> Accommodation Booking</li>
-                                <li> Support for Travel-related Services</li>
-                                <li> Developed, Managed & Maintained by AMR Enterprises</li>
-                            </ul>
+                        <div >
+                            <h3 className="text-brand text-xl font-bold mb-3">Vision</h3>
+                            <p className="text-gray-400 leading-7">
+                                To support a reliable digital travel-booking experience that connects customers with suitable accommodation and travel options.
+                            </p>
                         </div>
 
                     </div>
+                    <div className="w-full  h-[1px] bg-gray-700 my-8 mb-8"></div>
+                    
+
                 </div>
             </div>
         </section>

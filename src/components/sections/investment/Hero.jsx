@@ -7,9 +7,9 @@ const InvestmentHero = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left side - Image */}
         <div className="order-2 md:order-1">
-          <img 
-            src={HeroImage} 
-            alt="Investment Approach" 
+          <img
+            src={HeroImage}
+            alt="Investment Approach"
             className="w-full h-auto  object-cover"
           />
         </div>
@@ -19,17 +19,17 @@ const InvestmentHero = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
             AMAYRA INVESTMENTS' <br />APPROACH.
           </h1>
-          
+
           <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-            By combining a thorough understanding of clients' financial goals and risk profiles 
-            with our expertise in active management and sustainable investing, we provide 
-            investment portfolios that are not only aligned with clients' objectives but also 
+            By combining a thorough understanding of clients' financial goals and risk profiles
+            with our expertise in active management and sustainable investing, we provide
+            investment portfolios that are not only aligned with clients' objectives but also
             positioned to generate sustainable long-term returns.
           </p>
-          
+
           <Link
             to="/contact-us"
-            className="inline-block bg-brand text-black font-semibold px-10 py-4  hover:bg-brand-dark transition-colors duration-300"
+            className="inline-block bg-brand text-black font-semibold px-10 py-4 border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand"
           >
             Find out more
           </Link>

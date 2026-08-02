@@ -62,7 +62,7 @@ const WhyChoose = () => {
                             </p>
                             <Link
                                 to="/contact-us"
-                                className="inline-block bg-brand text-black font-semibold px-8 py-3  hover:bg-brand-dark transition-colors duration-300 text-center"
+                                className="inline-block bg-brand text-black font-semibold px-8 py-3 border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand text-center"
                             >
                                 Contact Us
                             </Link>

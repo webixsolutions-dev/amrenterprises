@@ -6,7 +6,7 @@ const MarketAnalysis = () => {
             <div className="max-w-7xl mx-auto">
 
                 <div className="mb-14">
-                    <h2 className="font-display text-3xl md:text-4xl font-bold tracking-wide">
+                    <h2 className="font-display text-xl md:text-2xl font-bold tracking-wide">
                         MARKET ANALYSIS
                     </h2>
 

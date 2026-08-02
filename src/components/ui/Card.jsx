@@ -88,7 +88,7 @@ Card.Title = function CardTitle({
 }) {
   return (
     <Tag
-      className={`text-white text-lg sm:text-xl font-semibold mb-3 sm:mb-4 ${className}`}
+      className={`text-brand text-lg sm:text-xl font-semibold mb-3 sm:mb-4 ${className}`}
     >
       {children}
     </Tag>

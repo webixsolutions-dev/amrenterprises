@@ -26,7 +26,7 @@ const Subscribe = () => {
             placeholder="   contact@amrenterprises.com"
             className="flex-1 px-4 py-3  bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-brand transition-colors"
           />
-          <button className="px-8 py-3 bg-brand text-black font-semibold  hover:bg-brand-dark transition-colors duration-300 whitespace-nowrap">
+          <button className="px-8 py-3 bg-brand text-black font-semibold border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand whitespace-nowrap">
             Sign up
           </button>
         </div>

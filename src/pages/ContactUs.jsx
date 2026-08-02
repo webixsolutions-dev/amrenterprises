@@ -18,7 +18,7 @@ const ContactUs = () => {
 
         {/* ================= HEADER ================= */}
         <div className="mb-20">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="font-display text-3xl md:text-2xl lg:text-3xl tracking-tight">
             Contact Us
           </h1>
 
@@ -31,9 +31,9 @@ const ContactUs = () => {
           {/* ================= LEFT FORM ================= */}
           <div className="lg:sticky lg:top-28 lg:self-start">
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-12">
+            <p className="text-xl md:text-2xl lg:text-xl mb-12">
               Drop us a line!
-            </h2>
+            </p>
 
             <CommonForm />
 
@@ -44,7 +44,7 @@ const ContactUs = () => {
 
             {/* Intro */}
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-5">
+              <h2 className="text-xl md:text-2xl lg:text-3xl normal-case mb-5">
                 Better yet, see us in person!
               </h2>
 
@@ -57,7 +57,7 @@ const ContactUs = () => {
             {/* Company */}
             <div className="mb-16">
 
-              <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h3 className="text-2xl md:text-xl normal-case mb-6">
                 Amayra Enterprises
               </h3>
 
@@ -89,7 +89,7 @@ const ContactUs = () => {
             {/* Hours */}
             <div>
 
-              <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h3 className="text-2xl md:text-xl font-semibold mb-6">
                 Hours
               </h3>
 
@@ -112,14 +112,9 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* ================= LOCATION MAP ================= */}
-        <div className="mt-24">
-
-          <h3 className="text-3xl md:text-4xl font-semibold mb-8">
-            Find Us
-          </h3>
-
-          <div className="w-full h-[400px] md:h-[500px] overflow-hidden border border-white/10">
+        {/* ================= LOCATION MAP - FULL WIDTH ================= */}
+        <div className="mt-24 -mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20">
+          <div className="w-full h-[400px] md:h-[500px] border-t border-b border-white/10">
             <iframe
               src="https://www.google.com/maps?q=Unit%20%231,%205009D%2051%20Street,%20Barrhead,%20Alberta%20T7N%201L1,%20Canada&output=embed"
               width="100%"
@@ -131,7 +126,6 @@ const ContactUs = () => {
               title="Amayra Enterprises Location"
             />
           </div>
-
         </div>
 
       </div>

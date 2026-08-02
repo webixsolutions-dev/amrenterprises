@@ -2,7 +2,7 @@ export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Investment Strategies', path: '/investment-strategies' },
   { label: 'About', path: '/about' },
-    { label: 'Our Products', path: '/booked-today' },
+    ,
   {
     label: 'Solutions',
     path: '#',
@@ -14,6 +14,7 @@ export const navLinks = [
     ],
   },
   { label: 'Stock Market', path: '/stock-market' },
+  { label: 'Our Products', path: '/booked-today' },
   { label: 'Contact Us', path: '/contact-us' },
   { label: 'Careers', path: '/careers' },
 ]

@@ -34,26 +34,26 @@ const services = [
 const OurServices = () => {
     return (
         <section className="bg-black px-5 py-10 sm:px-8 md:px-[6%] md:py-16">
-            <h1 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="text-xl font-semibold uppercase text-white sm:text-2xl md:text-3xl lg:text-4xl">
                 Our Services
             </h1>
 
-            <div className="mt-5 mb-8 h-px w-full bg-gray-500 sm:mt-6 sm:mb-10 md:mt-8 md:mb-12" />
+            <div className="mt-3 mb-8 h-px w-full bg-gray-500 sm:mt-4 sm:mb-10 md:mt-6 md:mb-12" />
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {services.map((service, index) => (
                     <Card 
                         key={index} 
-                        className="w-full p-6 md:p-8"  // ✅ Card width full, padding increase
+                        className="w-full p-6 md:p-8"  
                     >
-                        <Card.Title as="h2" className="text-xl sm:text-2xl mb-2">
+                        <Card.Title as="h2" className="text-xl text-white sm:text-2xl ">
                             {service.title}
                         </Card.Title>
 
                         <Card.Image
                             src={service.img}
                             alt={service.title}
-                            wrapperClassName="flex justify-center py-2 sm:py-4 w-full"
+                            wrapperClassName="flex justify-center  sm:py-2 w-full"
                             className="h-64 w-full object-contain sm:h-72 md:h-80"
                         />
 

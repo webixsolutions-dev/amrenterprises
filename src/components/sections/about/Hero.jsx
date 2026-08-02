@@ -16,23 +16,23 @@ const AboutHero = () => {
 
                 {/* Right Side - Content */}
                 <div className="order-1 md:order-2">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-                        WELCOME TO <br />
-                        <span className="text-white">AMAYRA ENTERPRISES</span>
+                    <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold leading-tight mb-4">
+                        WELCOME TO AMAYRA <br />
+                        <span className="text-white"> ENTERPRISES</span>
                     </h1>
 
                     <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                         We provide expert business and management consulting services to help
-                        your company succeed.<br/>
+                        your company succeed.<br />
                         Contact us today!
 
                     </p>
 
-                
+
 
                     <Link
                         to="/contact-us"
-                        className="inline-block bg-brand text-black font-semibold px-8 py-3  hover:bg-brand-dark transition-colors duration-300"
+                        className="inline-block bg-brand text-black font-semibold px-8 py-3 border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand"
                     >
                         Find out more
                     </Link>

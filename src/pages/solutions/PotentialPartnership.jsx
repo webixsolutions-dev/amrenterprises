@@ -105,9 +105,8 @@ const PotentialPartnership = () => {
             organizations, professionals, and institutions who share our
             commitment to excellence, integrity, and client satisfaction.
           </p>
-
           <Link to="/contact-us">
-            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold  hover:bg-brand/80 transition-all duration-300">
+            <button className="mt-6 px-6 py-3 bg-brand text-black font-semibold border border-brand transition-all duration-300 hover:bg-transparent hover:text-brand hover:border-brand">
               Find Out More
             </button>
           </Link>
@@ -122,7 +121,7 @@ const PotentialPartnership = () => {
           {/* Left Content */}
           <div className="px-0 md:pr-12 lg:pr-20">
 
-            <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+            <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
               Why Partner with Us?
             </h2>
 
@@ -133,7 +132,7 @@ const PotentialPartnership = () => {
               {whyPartner.map((item, index) => (
                 <div key={item.title}>
 
-                  <h3 className="text-xl font-medium text-white sm:text-2xl">
+                  <h3 className="text-xl font-medium normal-case text-white sm:text-2xl">
                     {item.title}
                   </h3>
 
@@ -164,7 +163,7 @@ const PotentialPartnership = () => {
       {/* About Amayra Enterprises Partnership */}
       <div className="mt-16 md:mt-24">
 
-        <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+        <h2 className="text-xl font-semibold uppercase text-white sm:text-xl md:text-2xl">
           About Amayra Enterprises Partnership
         </h2>
 
@@ -186,12 +185,12 @@ const PotentialPartnership = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mt-7 text-xl font-medium text-white sm:text-2xl">
+              <h3 className="mt-7 text-xl normal-case text-center font-medium text-white sm:text-2xl">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base">
+              <p className="mt-5 text-sm text-center leading-7 text-gray-400 sm:text-base">
                 {item.description}
               </p>
 
@@ -228,7 +227,7 @@ const PotentialPartnership = () => {
               <div key={item.title}>
 
 
-                <h3 className="mt-2 text-xl font-medium text-white sm:text-2xl md:text-3xl">
+                <h3 className="mt-2 text-xl normal-case font-medium text-white sm:text-xl md:text-2xl">
                   {item.title}
                 </h3>
 
@@ -248,12 +247,12 @@ const PotentialPartnership = () => {
       {/* Let's Partner Together */}
       <div className="mt-16 md:mt-24 mx-auto text-center">
 
-        <h2 className="text-2xl font-semibold uppercase text-white sm:text-3xl md:text-4xl">
+        <h2 className="text-xl font-semibold normal-case text-white sm:text-xl md:text-2xl">
           Let's Partner Together
         </h2>
 
 
-        <p className="mt-6 max-w-6xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
+        <p className="mt-6 mx-24 max-w-6xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg md:leading-8">
           Whether you're a financial advisor, institution, technology
           provider, or industry partner, we invite you to explore
           partnership opportunities with Amayra Enterprises Capitals and

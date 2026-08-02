@@ -30,24 +30,19 @@ const commitments = [
 
 export default function Commitment() {
   return (
-    <section className="bg-black text-white py-20 px-4">
+    <section className="bg-black text-white py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-start mb-10">Our Commitment to You</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-start mb-10">Our Commitment to You</h2>
         <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8"></div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {commitments.map((item) => (
-            <Card key={item.title} className="p-6 shadow-sm">
-              <Card.Title as="h3" className="text-lg mb-3">
+            <Card key={item.title} className="shadow-sm">
+              <Card.Title as="h3" className="text-base sm:text-lg mb-3 text-white">
                 {item.title}
               </Card.Title>
-              <Card.Image
-                src={item.image}
-                alt={item.title}
-                wrapperClassName="mb-4"
-                className="w-full h-100 object-cover"
-              />
-              <Card.Text className="text-gray-500">{item.text}</Card.Text>
+              
+              <Card.Text className="text-gray-500 my-8 sm:my-12 text-sm sm:text-base">{item.text}</Card.Text>
             </Card>
           ))}
         </div>

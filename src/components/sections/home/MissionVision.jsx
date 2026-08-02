@@ -17,29 +17,32 @@ const items = [
 
 export default function MissionVision() {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto bg-black">
-      <div className="text-start px-4 mb-12">
-        <h2 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
-          WHO WE ARE AT AMAYRA ENTERPRISES
-        </h2>
-        <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8"></div>
-
-      </div>
-      <div className="grid md:grid-cols-2 gap-10">
-        {items.map((item) => (
-          <Card key={item.title} className="p-8">
-            <Card.Image
-              src={item.img}
-              alt={item.title}
-              wrapperClassName="mb-6"
-              className="w-full h-100 object-cover"
-            />
-            <Card.Title as="h3" className="text-xl mb-4">
-              {item.title}
-            </Card.Title>
-            <Card.Text className="leading-relaxed">{item.text}</Card.Text>
-          </Card>
-        ))}
+    <section className="py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black overflow-x-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-start mb-12">
+          <span className="font-cabin font-bold text-[22px] uppercase tracking-wide text-gray-300 break-words">
+            Who We Are at Amayra Enterprises
+          </span>
+          <div className="w-full max-w-5xl h-[1px] bg-gray-700 mt-4 mb-8"></div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+          {items.map((item) => (
+            <Card key={item.title} className="p-4 sm:p-6 lg:p-8">
+              <Card.Image
+                src={item.img}
+                alt={item.title}
+                wrapperClassName="mb-6"
+                className="w-full h-64 sm:h-80 lg:h-100 object-cover rounded-lg"
+              />
+              <Card.Title as="h3" className="text-lg sm:text-xl mb-4 text-white">
+                {item.title}
+              </Card.Title>
+              <Card.Text className="leading-relaxed text-sm sm:text-base text-gray-300">
+                {item.text}
+              </Card.Text>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   )
