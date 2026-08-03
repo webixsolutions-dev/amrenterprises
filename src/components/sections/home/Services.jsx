@@ -21,17 +21,17 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-black  max-w-7xl mx-12">
-      <h2 className="text-3xl font-bold text-start mb-4 text-white  mx-12">Our Services</h2>
-      <div className="w-full max-w-5xl h-[1px] bg-gray-700 mb-8  mx-12 "></div>
-      <div className="grid grid-cols-1 pt-5 sm:grid-cols-2 gap-0 ">
+    <section className="py-12 md:py-16 lg:py-20 bg-black px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-start mb-4 text-white">Our Services</h2>
+      <div className="w-full max-w-5xl h-[1px] bg-gray-700 mb-8"></div>
+      <div className="grid grid-cols-1 pt-5 sm:grid-cols-2 gap-4 sm:gap-0">
         {services.map((item) => (
           <Card
             key={item.title}
             variant="outline"
-            className="p-6 text-brand sm:p-8 flex flex-col justify-center items-start w-full"
+            className="p-5 text-brand sm:p-8 flex flex-col justify-center items-start w-full"
           >
-            <Card.Title as="h3" className="text-lg  normal-case text-brand sm:text-xl mb-3">
+            <Card.Title as="h3" className="text-base sm:text-lg md:text-xl normal-case text-brand mb-3">
               {item.title}
             </Card.Title>
             <Card.Text className="leading-relaxed w-full">

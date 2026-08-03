@@ -47,7 +47,7 @@ const WhyChooseBookToday = () => {
   ];
 
   return (
-    <section className="bg-black px-4 sm:px-6 lg:px-12 mx-12">
+    <section className="bg-black px-4 sm:px-6 lg:px-12 lg:mx-12">
       <div className="container mx-auto">
         {pairs.map((pair, pairIndex) => (
           <div key={pairIndex} className="relative">
@@ -57,14 +57,14 @@ const WhyChooseBookToday = () => {
                 return (
                   <div
                     key={globalIndex}
-                    className={`max-w-full p-8 md:p-10 lg:p-12 relative ${index === 0 ? "md:border-r border-white/20" : ""
+                    className={`max-w-full p-5 sm:p-6 md:p-10 lg:p-12 relative ${index === 0 ? "md:border-r border-white/20" : ""
                       } ${pairIndex === 0 ? "border-b border-white/20 md:border-b-0" : ""}`}
                   >
-                    <p className="text-xl sm:text-xl md:text-2xl font-bold text-brand mb-6">
+                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-brand mb-4 md:mb-6">
                       {section.title}
                     </p>
 
-                    <ul className="space-y-3 text-gray-300 text-base sm:text-lg">
+                    <ul className="space-y-3 text-gray-300 text-sm sm:text-base md:text-lg">
                       {section.items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           {section.showBullets && (
@@ -85,11 +85,11 @@ const WhyChooseBookToday = () => {
           </div>
         ))}
       </div>
-      <div className="w-full h-[1px] bg-white/20 my-8"></div>
-      <p className="text-gray-400 text-base md:text-lg max-w-xl">
+      <div className="w-full h-[1px] bg-white/20 my-6 md:my-8"></div>
+      <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-xl">
         AMR Enterprises is the parent company. BookToday is one of its official products and trade names.
       </p>
-      <div className="w-full h-[1px] bg-white/20 my-8"></div>
+      <div className="w-full h-[1px] bg-white/20 my-6 md:my-8"></div>
 
     </section>
   );

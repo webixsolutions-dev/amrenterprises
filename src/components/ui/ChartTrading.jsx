@@ -2,12 +2,21 @@ import { useEffect, useRef } from "react";
 
 export default function ChartTrading() {
   const containerRef = useRef(null);
+  const loadedRef = useRef(false);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
+    // prevent double-injection from StrictMode/fast refresh
+    if (loadedRef.current) return;
+    loadedRef.current = true;
+
     container.innerHTML = "";
+
+    const widgetDiv = document.createElement("div");
+    widgetDiv.className = "tradingview-widget-container__widget";
+    container.appendChild(widgetDiv);
 
     const script = document.createElement("script");
     script.src =
@@ -51,19 +60,21 @@ export default function ChartTrading() {
         {
           title: "Futures",
           symbols: [
-            { s: "CME_MINI:ES1!", d: "S&P 500" },
-            { s: "CME:6E1!", d: "Euro" },
-            { s: "COMEX:GC1!", d: "Gold" },
-            { s: "NYMEX:CL1!", d: "WTI Crude Oil" },
+            { s: "TVC:GOLD", d: "Gold" },
+            { s: "TVC:SILVER", d: "Silver" },
+            { s: "TVC:USOIL", d: "WTI Crude Oil" },
+            { s: "TVC:UKOIL", d: "Brent Crude Oil" },
+            { s: "OANDA:NATGASUSD", d: "Natural Gas" },
+            { s: "TVC:DXY", d: "US Dollar Index" },
           ],
           originalTitle: "Futures",
         },
         {
           title: "Bonds",
           symbols: [
-            { s: "CBOT:ZB1!", d: "US 30-Year T-Bond" },
-            { s: "CBOT:ZN1!", d: "US 10-Year T-Note" },
-            { s: "CBOT:ZF1!", d: "US 5-Year T-Note" },
+            { s: "TVC:US10Y", d: "US 10Y Yield" },
+            { s: "TVC:US30Y", d: "US 30Y Yield" },
+            { s: "TVC:US02Y", d: "US 2Y Yield" },
           ],
           originalTitle: "Bonds",
         },
@@ -79,12 +90,17 @@ export default function ChartTrading() {
       ],
     });
 
-    container.appendChild(script);
+    widgetDiv.appendChild(script);
 
     return () => {
+      loadedRef.current = false;
       container.innerHTML = "";
     };
   }, []);
 
-  return <div className="tradingview-widget-container w-full" ref={containerRef} />;
+  return (
+    <div className="tradingview-widget-container w-full" ref={containerRef}>
+      <div className="tradingview-widget-container__widget"></div>
+    </div>
+  );
 }
