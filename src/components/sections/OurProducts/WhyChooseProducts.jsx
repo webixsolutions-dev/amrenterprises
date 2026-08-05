@@ -32,7 +32,7 @@ const WhyChooseBookToday = () => {
         "Specific future services and timelines will be added only after formal confirmation.",
       ],
       showBullets: false,
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=300&fit=crop",
+      image: "https://media.istockphoto.com/id/2209914068/photo/new-business-plan-setting-goals-for-the-new-year-2026-businessman-using-laptop-and-tablet-to.webp?a=1&b=1&s=612x612&w=0&k=20&c=tmISO_Cw03yjAOyLJS6TChJMWSSUnMjhzCsiXX_99rU=",
     },
   ];
 
