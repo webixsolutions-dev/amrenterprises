@@ -78,10 +78,10 @@ const ContactUs = () => {
                 <div className="mt-7 space-y-4">
 
                   <a
-                    href="tel:+17808001628"
+                    href="tel:+403-497-1589"
                     className="block text-brand text-lg md:text-xl hover:underline"
                   >
-                    +1 780-800-1628
+                    403-497-1589
                   </a>
 
                   <a
