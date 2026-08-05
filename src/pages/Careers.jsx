@@ -402,7 +402,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -459,7 +459,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -474,8 +474,6 @@ const Careers = () => {
           <div className="mb-12 md:mb-16">
             <div className="w-full h-px bg-white/30" />
           </div>
-
-          {/* Continue for remaining jobs with same structure... */}
 
           {/* ===================== JOB 3 ===================== */}
           <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 mb-14">
@@ -518,7 +516,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -581,7 +579,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -638,7 +636,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -702,7 +700,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -759,7 +757,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>
@@ -816,7 +814,7 @@ const Careers = () => {
               </div>
               <div className="mt-6 p-4 border border-white/10 rounded">
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5">How to apply</h3>
-                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info.amayraenterprises@gmail.com" className="text-brand hover:underline">info.amayraenterprises@gmail.com</a></p>
+                <p className="text-white/65 text-xs sm:text-sm">By email: <a href="mailto:info@amr-enterprise.com" className="text-brand hover:underline">info@amr-enterprise.com</a></p>
               </div>
             </div>
             <div>

@@ -88,7 +88,7 @@ const ContactUs = () => {
                     href="mailto:contact@amrenterprises.com"
                     className="block text-brand text-lg md:text-xl hover:underline"
                   >
-                    contact@amrenterprises.com
+                    info@amr-enterprise.com
                   </a>
 
                 </div>
